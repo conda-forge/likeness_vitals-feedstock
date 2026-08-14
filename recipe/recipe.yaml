@@ -20,7 +20,7 @@ build:
 
 requirements:
   host:
-    - python 3.11.*
+    - python ${{ python_min }}.*
     - setuptools >=61.0
     - pip
   run:
@@ -39,7 +39,9 @@ tests:
       imports:
         - likeness_vitals
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Shared utilities for the Likeness ecosystem
