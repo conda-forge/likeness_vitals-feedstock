@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: likeness_vitals
-  version: "1.4.9"
+  version: "1.5.0"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 2de340c525538026889c07b80fbdd88eafc44fa339ca050cdefd49f60fe45b72
+  sha256: 55c860387bec1a5df6b46aebd5fba198f3ab546ef983a9c952be27feeeda603e
 
 build:
-  number: 3
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
